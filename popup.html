@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      background-image: url('../icons/icon48.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #202124;
+      font-weight: 600;
+    }
+
+    .toggle-section {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      border: 1px solid #e8eaed;
+    }
+
+    .toggle-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .toggle-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .toggle-label {
+      font-size: 14px;
+      color: #3c4043;
+      flex: 1;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background: #dadce0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-switch.active {
+      background: #4285f4;
+    }
+
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .toggle-switch.active::after {
+      transform: translateX(20px);
+    }
+
+    .stats-section {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      border: 1px solid #e8eaed;
+    }
+
+    .stats-title {
+      font-size: 14px;
+      color: #5f6368;
+      margin-bottom: 8px;
+    }
+
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .stat-value {
+      font-weight: 500;
+      color: #1a73e8;
+    }
+
+    .instructions {
+      background: #e8f0fe;
+      border: 1px solid #d2e3fc;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 12px;
+      color: #1967d2;
+      line-height: 1.4;
+    }
+
+    .instructions strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .url-display {
+      background: #f8f9fa;
+      border: 1px solid #e8eaed;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 12px;
+      color: #5f6368;
+      margin-top: 8px;
+      word-break: break-all;
+    }
+
+    .clear-btn {
+      background: #ea4335;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .clear-btn:hover {
+      background: #d33b2c;
+    }
+
+    .color-picker-section {
+      margin-top: 12px;
+    }
+
+    .all-sites-section {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid #e8eaed;
+      margin-bottom: 16px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .expand-btn {
+      background: #f8f9fa;
+      border: 1px solid #e8eaed;
+      padding: 4px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+      color: #5f6368;
+      transition: background 0.2s;
+    }
+
+    .expand-btn:hover {
+      background: #e8eaed;
+    }
+
+    .sites-list {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 8px;
+    }
+
+    .site-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid #e8eaed;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      background: #f8f9fa;
+      font-size: 12px;
+    }
+
+    .site-info {
+      flex: 1;
+      margin-right: 8px;
+      overflow: hidden;
+    }
+
+    .site-url {
+      color: #1967d2;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .site-count {
+      color: #5f6368;
+      font-size: 11px;
+    }
+
+    .site-actions {
+      display: flex;
+      gap: 4px;
+    }
+
+    .site-action-btn {
+      background: white;
+      border: 1px solid #e8eaed;
+      padding: 4px 8px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 10px;
+      transition: background 0.2s;
+    }
+
+    .site-action-btn:hover {
+      background: #e8eaed;
+    }
+
+    .site-action-btn.delete {
+      color: #ea4335;
+    }
+
+    .site-action-btn.delete:hover {
+      background: #fce8e6;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 12px;
+      color: #5f6368;
+      font-size: 12px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 16px;
+      color: #5f6368;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon"></div>
+    <h1>Quick Site Note</h1>
+  </div>
+
+  <div class="toggle-section">
+    <div class="toggle-item">
+      <span class="toggle-label">Show notes on websites</span>
+      <div class="toggle-switch" id="notesToggle"></div>
+    </div>
+  </div>
+
+  <div class="stats-section">
+    <div class="stats-title">Current Website</div>
+    <div class="stat-item">
+      <span>Notes saved:</span>
+      <span class="stat-value" id="noteCount">-</span>
+    </div>
+    <div class="url-display" id="currentUrl">Loading...</div>
+    <button class="clear-btn" id="clearNotes">Clear all notes for this site</button>
+  </div>
+
+  <div class="instructions">
+    <strong>How to use:</strong>
+    Hold Ctrl (or Cmd on Mac) and double-click anywhere on a website to create a note. Click and drag notes to move them around. Drag the resize handles to change note size. Use the edit and delete buttons to manage your notes.
+  </div>
+
+  <div class="stats-section">
+    <div class="stats-title">Default Note Style (for new notes)</div>
+    <div class="color-picker-section">
+      <label for="noteColor" style="font-size: 12px; color: #5f6368; margin-bottom: 4px; display: block;">Background Color:</label>
+      <div style="display: flex; gap: 8px; align-items: center;">
+        <input type="color" id="noteColor" value="#fffbf0" style="width: 50px; height: 30px; border: 1px solid #e8eaed; border-radius: 4px; cursor: pointer;">
+        <input type="range" id="noteOpacity" min="0" max="100" value="100" style="flex: 1;">
+        <span id="opacityValue" style="font-size: 12px; color: #5f6368; min-width: 35px;">100%</span>
+      </div>
+      <div style="font-size: 11px; color: #5f6368; margin-top: 4px;">Each note can be customized individually when editing</div>
+    </div>
+  </div>
+
+  <div class="all-sites-section" id="allSitesSection">
+    <div class="section-header">
+      <div class="stats-title">All Websites with Notes</div>
+      <button class="expand-btn" id="expandBtn">Show ▼</button>
+    </div>
+    <div class="sites-list" id="sitesList" style="display: none;">
+      <div class="loading">Loading...</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
