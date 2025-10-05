@@ -30,8 +30,7 @@ A Chrome extension that lets you create, customize, and save notes directly on a
 
 1. **Download the Extension**
    ```bash
-   git clone https://github.com/peacerk/quick-site-note.git
-   cd quick-site-note
+   git clone https://github.com/Peacerk/Quick-Site-Note.git
    ```
 
 2. **Load in Chrome**
