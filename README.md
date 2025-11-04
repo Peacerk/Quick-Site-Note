@@ -147,8 +147,10 @@ Found a bug or have a feature idea?
 If you find this extension helpful:
 - ⭐ Star this repository
 - 📢 Share with others who might find it useful
-- 🧧 Donate to us for our hard work
--    You can transfer to my paypal account: paypal.me/Peacerk
--    Bitcoin Address: 16cYmSivi3W5uEkKSSM6dGGXgYfEiQqWFf
+Donate to me if you find my work useful, and support my work
+### Paypal
+You can transfer to my PayPal account: paypal.me/Peacerk
+### Bitcoin
+Bitcoin Address: 16cYmSivi3W5uEkKSSM6dGGXgYfEiQqWFf
 
 ---
