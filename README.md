@@ -106,23 +106,6 @@ Set default color and opacity for new notes on each website through the extensio
 - `activeTab`: Access current webpage to inject notes
 - `<all_urls>`: Allow notes on any website
 
-## 📂 Project Structure
-
-```
-quick-site-note/
-├── icons/
-│   ├── icon16.png          # Toolbar icon (16x16)
-│   ├── icon48.png          # Extension management (48x48)
-│   └── icon128.png         # Chrome Web Store (128x128)
-├── manifest.json           # Extension configuration
-├── content.js              # Main note functionality
-├── content.css             # Note styling
-├── popup.html              # Extension popup interface
-├── popup.js                # Popup functionality
-├── background.js           # Service worker
-└── README.md              # This file
-```
-
 ## 🎯 Use Cases
 
 - **Research**: Keep track of important information while browsing
@@ -148,25 +131,6 @@ Found a bug or have a feature idea?
 - **Feature Requests**: Open an issue describing the feature and use case
 - **Questions**: Use GitHub Discussions
 
-## 📝 Changelog
-
-### Version 1.0 (Current)
-- ✅ Initial release
-- ✅ Create, edit, and delete notes
-- ✅ Drag and drop functionality
-- ✅ Resize notes with 8-point handles
-- ✅ Individual note color customization
-- ✅ Opacity control per note
-- ✅ Per-website note storage
-- ✅ Website overview panel
-- ✅ Toggle note visibility
-- ✅ Bulk delete per website
-- ✅ Ctrl + Double-click to create notes
-
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
@@ -176,20 +140,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Icon design inspired by modern flat design principles
-- Thanks to the Chrome Extension community for documentation and support
-- Built with ❤️ for productivity enthusiasts
 - Thanks to Claude AI for development and support
 
-## 📞 Support
+## Support and Donation
 
 If you find this extension helpful:
 - ⭐ Star this repository
-- 🐛 Report bugs via GitHub Issues
-- 💡 Suggest features via GitHub Discussions
 - 📢 Share with others who might find it useful
-- Donate to us for our hard work
+- 🧧 Donate to us for our hard work
+-    You can transfer to my paypal account: paypal.me/Peacerk
+-    Bitcoin Address: 16cYmSivi3W5uEkKSSM6dGGXgYfEiQqWFf
 
 ---
-
-**Made with 🌍 by Peacerk** 
