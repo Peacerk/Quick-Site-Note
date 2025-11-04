@@ -147,6 +147,7 @@ Found a bug or have a feature idea?
 If you find this extension helpful:
 - ⭐ Star this repository
 - 📢 Share with others who might find it useful
+
 Donate to me if you find my work useful, and support my work
 ### Paypal
 You can transfer to my PayPal account: paypal.me/Peacerk
