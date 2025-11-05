@@ -151,6 +151,8 @@ If you find this extension helpful:
 Donate to me if you find my work useful, and support my work
 ### Paypal
 You can transfer to my PayPal account: paypal.me/Peacerk
+### UPI
+UPI address: peacerk@ibl
 ### Bitcoin
 Bitcoin Address: 16cYmSivi3W5uEkKSSM6dGGXgYfEiQqWFf
 
